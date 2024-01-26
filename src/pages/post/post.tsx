@@ -24,6 +24,7 @@ const Post = () => {
     <div className={styles['text-content']}>
       <h1 className={styles.title}>{post.title}</h1>
       <h3 className={styles.author}>{post.author}</h3>
+      <hr/>
       <p className={styles.text}>{post.content}</p>
     </div>
   </div> );

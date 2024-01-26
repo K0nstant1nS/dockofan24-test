@@ -23,6 +23,10 @@
 .image {
   padding: 60px 20px 10px;
   float: left;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .text-content {
@@ -31,6 +35,10 @@
 
 .title {
   @include font('Times New Roman', 42px, 600, 150%, $off-white);
+
+  @media screen and (max-width: 1200px) {
+    color: inherit;
+  }
 }
 
 .author {
