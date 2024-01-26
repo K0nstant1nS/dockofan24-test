@@ -11,8 +11,6 @@
 
 .image-container {
   @include size(300px, 180px);
-  z-index: 1;
-  position: relative;
 }
 
 .image {
@@ -39,7 +37,6 @@
 
 .like {
   @include position(absolute, 8px, 10px);
-  z-index: 3;
   fill: rgba(0, 0, 0, 0);
   transition: all .5s;
   cursor: pointer;

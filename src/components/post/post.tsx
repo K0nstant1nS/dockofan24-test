@@ -6,7 +6,6 @@ import LikeIcon from '../../images/like.svg'
 import { TPost } from '../../utils/types';
 import { useDispatch } from '../../services/hooks';
 import { postsActions } from '../../services/reducers/posts';
-import Image from '../image/image';
 
 const Post: FC<TPost> = ({id, title, author, content, reaction, image}) => {
   const dispatch = useDispatch();
@@ -28,7 +27,7 @@ const Post: FC<TPost> = ({id, title, author, content, reaction, image}) => {
 
   return ( <article onClick={openPost} className={styles.card}>
     <div className={styles['image-container']}>
-      <Image loading='lazy' className={styles.image} src={image}/>
+      <img loading='lazy' className={styles.image} src={image}/>
     </div>
     <div className={styles.content}>
       <h3 className={styles.title}>{title}</h3>
