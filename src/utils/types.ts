@@ -12,5 +12,6 @@ export type TPost = {
   author: string;
   genre: string;
   content: string;
-  reaction: boolean
+  reaction: boolean;
+  image: string;
 };

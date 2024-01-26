@@ -1,0 +1,76 @@
+@use '../../stylesheets/mixins' as *;
+@use '../../stylesheets/variables' as *;
+
+.card {
+  @include flex(column);
+  @include size(300px, 430px);
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image {
+  @include size(300px, 180px);
+  background-color: white;
+}
+
+.content {
+  @include flex(column, $gap: 8px);
+  height: 100%;
+  position: relative;
+  padding: 8px 15px;
+  background-color: $off-white;
+}
+
+.trash {
+  @include position(absolute, 8px, 10px);
+  transition: opacity .5s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6
+  }
+}
+
+.like {
+  @include position(absolute, 8px, 10px);
+  fill: rgba(0, 0, 0, 0);
+  transition: all .5s;
+  cursor: pointer;
+
+  &:hover {
+    fill: $fill-black;
+    fill-opacity: 0.4;
+  }
+
+  &.active {
+    fill: $fill-black;
+  }
+}
+
+.title {
+  @include font('Times New Roman', 22px, 600, 30px);
+}
+
+.author {
+  @include font('Times New Roman', 18px, 500, 150%, $grey);
+  font-style: italic;
+}
+
+.text {
+  @include font('Times New Roman', 16px, 400, 150%);
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+
+  &::before {
+    @include position(absolute, $bottom: 0, $left: 0);
+    content: "";
+    width: 100%;
+    height: 100px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(255,255,255,0.9526992926076681) 70%);
+  }
+}
+
+

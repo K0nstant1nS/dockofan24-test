@@ -6,5 +6,5 @@ import { TPost } from "../../utils/types";
 
 export const getPosts = createAsyncThunk('posts/getPosts', async ()=>{
   const data = await Api.getPosts(100);
-  return data.data.map((item: TPost) => ({...item, reaction: false, id: uuid()}));
+  return data.data.map((item: TPost) => ({...item, reaction: false, id: uuid(), image: `https://placehold.co/500x300?text=${item.title}`}));
 })

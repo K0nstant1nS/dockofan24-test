@@ -24,6 +24,9 @@ export const postsSlice = createSlice({
       if(post) {
         post.reaction = !post.reaction
       }
+    },
+    removePost(state, action: IAction<string>){
+      state.data = state.data.filter(item => item.id !== action.payload)
     }
   },
   extraReducers: (builder) => {
