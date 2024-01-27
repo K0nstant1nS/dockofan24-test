@@ -12,7 +12,6 @@
 }
 
 .liked-filter {
-  @include input-style-reset;
   @include flex(row, flex-start, center, 10px);
   background-color: $off-white;
   padding: 20px 20px;
